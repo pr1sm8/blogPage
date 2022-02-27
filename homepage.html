@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nikith's Blog</title>
+		<style>
+			.main_container{
+				display:flex;
+				flex-direction: column;
+				/*border:2px solid black;*/
+			}
+			.side_container{
+				display:flex;
+				flex-direction: column;
+				/*border:2px solid black;*/
+			}
+			.content_container{
+				margin:10px;
+				padding:10px;
+				height: 100px;
+				/*border:1px solid red;*/
+				background-color: #bdbdbd;
+			}
+			.content_container:nth-child(even){
+				background-color: #f5f5f5;
+			}
+			.content_container:hover{
+				background-color: #bdbdbd;
+			}
+			.grid_container{
+				display:grid;
+				grid-template-columns: 70% 30%;
+			}
+			
+			@media screen and (max-width: 800px) {
+				.grid_container{
+					display:block;
+				}
+				.side_container{
+					display:grid;
+					grid-template-columns: 50% 50%;
+				}
+				
+			}
+			.nav_bar{
+				/*border:2px solid blue;*/
+				display:flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+			}
+			.nav_button{
+				background-color: black;
+				color:aliceblue;
+				padding:10px;
+				text-align: center;
+			}
+			.nav_button:hover{
+				background-color: yellow;
+			}
+			body{
+				background-color: #252525;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav_bar">
+			<a class="nav_button">HOME</a>
+			<a class="nav_button">asd</a>
+		</div>
+
+		<div class="grid_container">
+
+			<div class="main_container">
+				<div class="content_container">
+					<p>This is the content container</p>
+				</div>
+				<div class="content_container">
+					<p>This is the content container</p>
+				</div>
+				<div class="content_container">
+					<p>This is the content container</p>
+				</div>
+				<div class="content_container">
+					<p>This is the content container</p>
+				</div>
+				
+			</div>
+			<div class="side_container">
+				<div class="content_container">
+					<p>This is the side container</p>
+				</div>
+				<div class="content_container">
+					<p>This is the side container</p>
+				</div>
+				<div class="content_container">
+					<p>This is the side container</p>
+				</div>
+				<div class="content_container">
+					<p>This is the side container</p>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
